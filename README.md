@@ -1,20 +1,49 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Famestack - Premium SMM Panel
 
-# Run and deploy your AI Studio app
+Famestack is a high-performance, feature-rich Social Media Marketing (SMM) panel built with React, Vite, and Supabase. It offers a seamless experience for both users and administrators to manage social growth services.
 
-This contains everything you need to run your app locally.
+## ✨ Features
 
-View your app in AI Studio: https://ai.studio/apps/9555e058-5aeb-44fb-9879-862b9474c230
+### For Users
+- **Dynamic Dashboard**: Real-time balance tracking and account overview.
+- **Smart Ordering**: Easy-to-use "New Order" interface with category filtering.
+- **Mass Orders**: Process multiple orders at once for maximum efficiency.
+- **Wallet & History**: Comprehensive transaction and order history.
+- **Support System**: Integrated ticket-based support.
+- **Account Management**: Update profiles and manage security.
 
-## Run Locally
+### For Administrators
+- **Service Management**: Create, edit, and categorize services with ease.
+- **Provider API Integration**: Connect to external SMM providers and sync services/orders automatically.
+- **User Management**: Monitor user balances and activities.
+- **Advanced Analytics**: Track revenue and order trends.
 
-**Prerequisites:**  Node.js
+## 🚀 Getting Started
 
+### Prerequisites
+- Node.js (v18 or higher)
+- Supabase Account
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables:
+   Create a `.env` file based on `.env.example` and fill in your Supabase credentials.
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 🛠 Tech Stack
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Backend & Auth**: Supabase
+- **Animations**: Framer Motion
+
+## 📄 License
+MIT License
