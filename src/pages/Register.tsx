@@ -8,6 +8,7 @@ export const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [successMsg, setSuccessMsg] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -15,6 +16,7 @@ export const Register = () => {
         e.preventDefault();
         setLoading(true);
         setError('');
+        setSuccessMsg('');
 
         const { error } = await supabase.auth.signUp({
             email,
@@ -22,7 +24,8 @@ export const Register = () => {
             options: {
                 data: {
                     full_name: name,
-                }
+                },
+                emailRedirectTo: `${window.location.origin}/dashboard`
             }
         });
 
@@ -36,8 +39,7 @@ export const Register = () => {
                 type: 'user'
             }).then();
 
-            // The trigger handles inserting into profiles
-            navigate('/dashboard');
+            setSuccessMsg('Registration was successful! Please check your email for a confirmation link.');
         }
         setLoading(false);
     };
@@ -98,7 +100,8 @@ export const Register = () => {
                             </div>
                         </div>
 
-                        {error && <div className="text-red-600 text-sm font-medium">{error}</div>}
+                        {error && <div className="text-red-500 bg-red-50 p-3 rounded-lg text-sm font-medium border border-red-100">{error}</div>}
+                        {successMsg && <div className="text-emerald-600 bg-emerald-50 p-3 rounded-lg text-sm font-medium border border-emerald-100 text-center">{successMsg}</div>}
 
                         <div>
                             <button
